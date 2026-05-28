@@ -159,7 +159,7 @@
       "copy_run": "Copiază comandă de execuție"
     },
     "code": {
-      "copy_file": "Copiază conținutul fișierulut"
+      "copy_file": "Copiază conținutul fișierului"
     },
     "diff": {
       "merge_modified_lines": "Combină liniile modificate",
@@ -402,12 +402,12 @@
       "none": "Acest pachet a fost semnalat ca nu mai este necesar, și funcționalitatea este probabil disponibil nativ în toate motorii.",
       "learn_more": "Află mai multe",
       "learn_more_above": "Află mai multe mai sus.",
-      "community": "omunitate",
+      "community": "comunitate",
       "consider_no_dep": "+ A considera fără dependențe?"
     },
     "stats": {
       "license": "Licență",
-      "deps": "Ddependențe",
+      "deps": "Dependențe",
       "install_size": "Dimensiunea pachetului",
       "vulns": "Vulnerabilități",
       "published": "Publicat",
@@ -636,7 +636,7 @@
       "username_placeholder": "nume de utilizator...",
       "add_button": "adaugă",
       "cancel_add": "Anuleaza adăugarea proprietarului",
-      "add_owner": "+ Aadaugă proprietar",
+      "add_owner": "+ Adaugă proprietar",
       "show_more": "(afișează încă {count} rezultate)",
       "show_less": "(afișează mai puține)",
       "maintainer_template": "{avatar} {char126}{name}"
@@ -773,9 +773,9 @@
         "read_only": "citire",
         "read_write": "citire-scriere"
       },
-      "grant_button": "accordă",
+      "grant_button": "acordă",
       "cancel_grant": "Anulează acordarea accesului",
-      "grant_access": "+ Accordă accesul echipei"
+      "grant_access": "+ Acordă accesul echipei"
     },
     "list": {
       "filter_label": "Filtrează pachetele",
@@ -1050,13 +1050,13 @@
     "scope_keywords_description": "Caută numai cuvintele cheie",
     "scope_all": "Toate",
     "scope_all_description": "Caută în toate câmpurile, suportă operatorii name: desc: kw:",
-    "weekly_downloads": "Dowloads săptămânal",
+    "weekly_downloads": "Descărcări săptămânale",
     "updated_within": "Actualizat în",
     "security": "Securitate",
     "keywords": "Cuvinte cheie",
     "more_keywords": "+{count} mai multe",
     "clear_all": "Șterge toate",
-    "remove_filter": "Șterge flitrul {label}",
+    "remove_filter": "Șterge filtrul {label}",
     "chips": {
       "search": "Caută",
       "downloads": "Descărcări",
@@ -1609,7 +1609,7 @@
     "welcome": "Dacă ești interesat să ne ajuți să traducem {npmx} într-una dintre limbile enumerate mai jos, ai ajuns în locul potrivit! Această pagină, care se actualizează automat, afișează întotdeauna tot conținutul pentru care ai putea fi de ajutor în acest moment.",
     "p1": "Folosim {lang} ca limbă implicită, cu un total de {count}. Dacă vrei să ne ajuți să adăugăm traduceri, caută limba în {bylang} și deschide detaliile.",
     "p1_lang": "Engleză americană (en-US)",
-    "p1_count": "0 messaje | 1 messaj |{count} messaje",
+    "p1_count": "0 mesaje | 1 mesaj |{count} mesaje",
     "p2": "Înainte de a începe, te rugăm să citești al nostru {guide} pentru a afla mai multe despre procesul nostru de traducere și despre cum te poți implica.",
     "guide": "ghid de localizare (i18n)",
     "by_locale": "Progresul traducerii pe setări de localizare",
