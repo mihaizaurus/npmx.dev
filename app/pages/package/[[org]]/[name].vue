@@ -42,15 +42,7 @@ defineOgImage(
     version: () => requestedVersion.value,
     variant: 'download-chart',
   },
-  [
-    { key: 'og', alt: () => `npm package ${packageName.value} download chart and stats` },
-    {
-      key: 'whatsapp',
-      width: 800,
-      height: 800,
-      alt: () => `npm package ${packageName.value} download chart and stats`,
-    },
-  ],
+  { alt: () => `npm package ${packageName.value} download chart and stats` },
 )
 
 if (import.meta.server) {
@@ -212,6 +204,7 @@ const {
   error,
 } = usePackage(packageName, () => resolvedVersion.value ?? requestedVersion.value)
 
+const { data: licenseChangeData } = useLicenseChanges(packageName, resolvedVersion)
 const { diff: sizeDiff } = useInstallSizeDiff(packageName, resolvedVersion, pkg, installSize)
 const { versions: commandPaletteVersions, ensureLoaded: ensureCommandPaletteVersionsLoaded } =
   useCommandPalettePackageVersions(packageName)
@@ -492,7 +485,9 @@ const versionUrlPattern = computed(
   () => `/package/${pkg.value?.name || packageName.value}/v/{version}`,
 )
 
-useCommandPaletteVersionCommands(commandPalettePackageContext, versionUrlPattern)
+useCommandPaletteVersionCommands(commandPalettePackageContext, version =>
+  packageRoute(packageName.value, version),
+)
 
 const dependencyCount = computed(() => getDependencyCount(displayVersion.value))
 
@@ -917,6 +912,8 @@ const showSkeleton = shallowRef(false)
         </section>
 
         <div class="space-y-6" :class="$style.areaVulns">
+          <!-- license change warning -->
+          <LicenseChangeWarning :change="licenseChangeData?.change ?? null" />
           <!-- Bad package warning -->
           <PackageReplacement
             v-if="moduleReplacement"
